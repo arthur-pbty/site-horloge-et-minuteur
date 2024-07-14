@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horloge et Minuteur</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+      .dark {
+        --tw-bg-opacity: 1;
+        background-color: rgba(17, 24, 39, var(--tw-bg-opacity)); /* bg-gray-900 */
+      }
+      .dark .bg-white {
+        --tw-bg-opacity: 1;
+        background-color: rgba(31, 41, 55, var(--tw-bg-opacity)); /* bg-gray-800 */
+      }
+      .dark .text-gray-700 {
+        --tw-text-opacity: 1;
+        color: rgba(229, 231, 235, var(--tw-text-opacity)); /* text-gray-200 */
+      }
+      
+      .dark .shadow {
+        --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        box-shadow: var(--tw-shadow);
+      }
+      .dark input[type="text"],
+      .dark select {
+        background-color: rgba(31, 41, 55, var(--tw-bg-opacity)); /* bg-gray-800 */
+        color: rgba(229, 231, 235, var(--tw-text-opacity)); /* text-gray-200 */
+        border-color: rgba(156, 163, 175, var(--tw-border-opacity)); /* border-gray-400 */
+      }
+      .dark input[type="text"]:focus,
+      .dark select:focus {
+        border-color: rgba(99, 102, 241, var(--tw-border-opacity)); /* border-indigo-500 */
+        --tw-ring-opacity: 0.5;
+        --tw-ring-color: rgba(99, 102, 241, var(--tw-ring-opacity)); /* ring-indigo-500 */
+        box-shadow: 0 0 0 2px var(--tw-ring-color);
+      }
+    </style>
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden p-5">
+        <h1 class="font-bold text-xl mb-2 text-gray-700">Horloge</h1>
+        <div id="clock" class="text-2xl font-bold mb-4"></div>
+
+        <h2 class="font-bold text-lg mb-2 text-gray-700">Minuteur</h2>
+        <input type="number" id="timerInput" class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Minutes">
+        <button id="startTimer" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-2">Démarrer</button>
+        <div id="timer" class="text-xl font-bold mt-4"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
